@@ -1,47 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
   {% include head.html %}
 
   <body>
+     {% include header.html %}
 
-    {% include sidebar.html %}
+    <div class="col-md-12 blog-theme-class">
+          <!-- Top Blog Header -->
+          <div class="row jumb-bot">
+            <div class="col-md-1"></div>
+            <div class="jumbotron jumb-bot-jumbu col-md-10">
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
+              <h1>{{site.title}}</h1>
+              <p>{{site.description}}</p>
+            </div>            
+            <div class="col-md-1"></div>
+          </div>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
+    <div class="col-md-12">
+        {{ content }}
+    </div>
+    <div class="col-md-12 share-div">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          {% include sharer.html %}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="col-md-12">
+    {% include footer.html %}
+    </div>
+    <div class="col-md-12">
+    {% include endfooter.html %}
+    </div>
+    {% include include_js.html %}
+    
   </body>
+
 </html>

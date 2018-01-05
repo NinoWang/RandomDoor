@@ -1,22 +1,44 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+# Site settings
+title: Swift
+description: A clean minimal Theme for Jekyll
+email: pranav@maangalabs.com
+baseurl: /swift
+url: "http://pranav.maangalabs.com" # the base hostname & protocol for your site
+#favicon
+favicon: /favicon.png
 
-# Setup
-title:               任意门
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://ninowang.github.io/RandomDoor/
-baseurl:             ''
-paginate:            5
+#feed
+feedburner_username: maangalabs
+#twitter
+twitter_username: pranavrajs
+github_username:  pranavrajs
 
-# About/contact
-author:
-  name:              Nino
-  url:               https://ninowang.github.io/RandomDoor/
-  email:             1300855778@qq.com
+#linkedin
+linkedin_username: pranavrajs
 
-# Custom vars
-version:             1.0.0
+#google analytics
+google_analytics_id : UA-53386152-2
+#gplus
+gplus_username: 101893920934936418705
+
+#fb_username
+fb_username: pranav.tayberrycreative
+
+#permalink /blog/2014/11/11/this-is-a-sample-post
+permalink: /blog/:year/:month/:day/:title
+# Build settings
+markdown: kramdown
+
+#Disqus configuration
+disqus_short_name: maangalabscom
+disqus_show_comment_count: true
+
+#Can be used for multiple author blogs ! Add name to post For more visit the sample
+authors:
+  pranavrajs:
+    display_name: Pranav Raj S
+    email: pranavrajs@gmail.com
+    fb: pranav.tayberrycreative
+    linkedin: pranavrajs
+    twitter: pranavrajs
+    github: pranavrajs
